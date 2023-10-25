@@ -14,21 +14,27 @@ public class Control : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.Space))
-        transform.position += (new Vector3(0, 1, 0)) * Time.deltaTime ;
+        transform.position += (new Vector3(0, 2, 0)) * Time.deltaTime ;
 
         if (Input.GetKey(KeyCode.LeftShift))
-            transform.position += (new Vector3(0, -1, 0)) * Time.deltaTime;
+            transform.position += (new Vector3(0, -2, 0)) * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.W))
-            transform.position += (new Vector3(0, 0, 1)) * Time.deltaTime;
+            transform.position += (new Vector3(0, 0, 2)) * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.S))
-            transform.position += (new Vector3(0, 0, -1)) * Time.deltaTime;
+            transform.position += (new Vector3(0, 0, -2)) * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.Q))
-            transform.Rotate(Vector3.up,180 * Time.deltaTime);
+        if (Input.GetKey(KeyCode.D))
+            transform.position += (new Vector3(2, 0, 0)) * Time.deltaTime;
+
+        if (Input.GetKey(KeyCode.A))
+            transform.position += (new Vector3(-2, 0, 0)) * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.E))
+            transform.Rotate(Vector3.up,180 * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.Q))
             transform.Rotate(Vector3.up, -180 * Time.deltaTime);
     }
 }
