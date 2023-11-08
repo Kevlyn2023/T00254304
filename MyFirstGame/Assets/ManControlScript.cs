@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ManControlScript : MonoBehaviour
@@ -48,7 +49,9 @@ public class ManControlScript : MonoBehaviour
                 break;
 
             case ManState.Follow:
-                transform.LookAt(player.transform.position);
+
+                Vector3 target = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+                transform.LookAt(target);
                 transform.position += transform.forward * walkingSpeed * Time.deltaTime;
 
 
