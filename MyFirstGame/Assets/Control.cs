@@ -1,24 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Control : MonoBehaviour
 {
-    public GameObject Camera;
+
     // Start is called before the first frame update
     void Start()
     {
+
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
-        transform.position += (new Vector3(0, 2, 0)) * Time.deltaTime ;
 
-        if (Input.GetKey(KeyCode.LeftShift))
-            transform.position += (new Vector3(0, -2, 0)) * Time.deltaTime;
+        if (Input.GetKey(KeyCode.Space))
+        transform.position += (new Vector3(0, 4, 0)) * Time.deltaTime ;
 
         if (Input.GetKey(KeyCode.W))
             transform.position += transform.forward * Time.deltaTime * 4;
@@ -37,5 +37,8 @@ public class Control : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Q))
             transform.Rotate(Vector3.up, -120 * Time.deltaTime);
+
+       
+
     }
 }
